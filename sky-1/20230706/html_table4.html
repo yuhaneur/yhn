@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* css 영역 */
+/* td{
+    border:1px solid black;
+} 클래스명으로 선택하려면 .클래스이름 해야된다.
+
+id 명으로 선택하려면 #아이디이름 해야된다.
+ */
+.item{
+    border:2px dashed gray;
+    width:200px;
+    height:50px;
+    text-align:center;/* 수평정렬*/
+    vertical-align: bottom; /*수직정렬*/
+}
+#box{
+    border-spacing: 0;
+    background-color: bisque;
+}
+.item:hover{ /* 마우스오버: 마우스커서가 위에있다면 */
+    background-color: red;
+
+}
+</style>
+
+</head>
+<body>
+   <!--
+    css에서 html태그에 모양을 주려면
+    어떤 태그에 적용할것인지 '선택'해야한다.
+    css에 선택자라고 하는데 어떤 태그를 선택할 것 인지
+    선택자로 선택한다.
+    선택자의 종류로는 
+            태그이름, id(유일한이름),class(중복허용),name 등이 있다.
+   -->
+    <table id="box">
+        <tr>
+            <td class="item">1</td>
+            <td class="item">2</td>
+            <td class="item">3</td>
+        </tr>
+        <tr>
+            <td class="item">4</td>
+            <td class="item">5</td>
+            <td class="item">6</td>
+        </tr>
+    </table>
+
+</body>
+</html>

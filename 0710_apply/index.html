@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>엘지전자 2023년도 공채 입사지원 페이지</title>
+    <META charset="utf-8" />
+    <meta name="author" content="haneul Yu" />
+    <meta name="keywords" content="엘지, 엘지전자, 공채 ,입사지원 lg" />
+    <meta name="description" content="엘지전자 2023년도 공채 입사지원 페이지" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!--링크 위치만 언급 href / 직접 이미지 가져오는건 src-->
+</head>
+
+<body>
+    <table id="spec">
+        <tr>
+            <th>무게</th>
+            <td>21.15kg</td>
+            <th>가로</th>
+            <td>1,200mm</td>
+        </tr>
+        <tr>
+            <th>세로</th>
+            <td>200mm</td>
+            <th>소비전력</th>
+            <td>2w/h</td>
+        </tr>
+        
+    </table>
+
+    <table id="grade">
+        <tr>
+            <th>성명</th>
+            <th>수학</th>
+            <th>과학</th>
+        </tr>
+        <tr>
+            <td>김태희</td>
+            <td>95</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>한지호</td>
+            <td>100</td>
+            <td>100</td>
+        </tr>
+    </table>
+    <div id="box3">
+        <div>saddfasf</div>
+        <p>asdfadsf</p>
+        <p>sadffd</p>
+        <p>fsdaasfd</p>
+        <p>dfsaafsd</p>
+        <p>dfsaafsd</p>
+        <div>dfsaasfd</div>
+        <p>dfsaafsd</p>
+    </div>
+<div id="box2">
+    <p>asdfsdfsadf</p>
+    <p>asdfsdfsadf</p>
+    <p>asdfsdfsadf</p>
+    <p>asdfsdfsadf</p>
+    <p>asdfsdfsadf</p>
+    <p>asdfsdfsadf</p>
+    <p>asdfsdfsadf</p>
+    <p>asdfsdfsadf</p>
+    <p>asdfsdfsadf</p>
+</div>
+    <div id="box1">
+        <p>동해물과 백두산이</p>
+        <p>마르고 닳도록</p>
+        <p>하느님이 보우하사</p>
+        <p>우리나라만세</p>
+    </div>
+    <div id="parent">
+        <p>aedfawef</p>
+        <p>aedfawef</p>
+        <span>asdf adsfasf</span> 
+        <span>asdf adsfasf</span> 
+    </div>
+    <a href="http://naver.com">링크</a>
+    <!--  http = hyper text transfer protocol 
+    html파일을 전송 얘는 금방 삭제됨
+    ftp:// = file transfer protocol 파일을 주고받기위함 -->
+    <Form id="apply" action="apply.php" method="get">
+        <table id="resume">
+            <tr>
+                <td class="title">아이디</td>
+                <td><input type="text" name="userId" class="need"/></td>
+            </tr>
+            <tr>
+                <td class="title">비밀번호</td>
+                <td><input type="password" name="userPw" class="need"/></td>
+            </tr>
+            <tr>
+                <td class="title">성명</td>
+                <td><input type="text" name="userName" class="need"/></td>
+            </tr>
+            <tr>
+                <td class="title">생년월일</td>
+                <td><input type="date" name="userBirth"/></td>
+            </tr>
+            <tr>
+                <td class="title">지원부서</td>
+                <td>
+                    <select name="part" >
+                        <option value="">지원부서 선택</option>
+                        <option value="1">개발팀</option>
+                        <option value="2">디자인팀</option>
+                        <option value="3">컨설팅팀</option>
+                        <option value="4">경영지원팀</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="title">희망연봉</td>
+                <td><input type="number" name="annual" step="100" min="2000" max="5000" >만원
+                    <input type="checkbox" name="consul">면접 후 결정
+                </td>
+            </tr>
+            <tr>
+                <td class="title">국적</td>
+                <td>
+                    <input type="radio" name="national" value="1">내국인
+                    <input type="radio" name="national" value="0">외국인 
+                    <select name="nationt">
+                        <option value="">국적을 선택하세요.</option>
+                        <optgroup label="아시아">
+                            <option value="1">한국</option>
+                            <option value="2">중국</option>
+                            <option value="3">일본</option>
+                        </optgroup>
+                        <optgroup label="유럽">
+                            <option value="4">프랑스</option>
+                            <option value="5">미국</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <!-- 태그안에서 너비와 높이는 위드와 헤시가아님 rows와 cols 로 적는다 -->
+                <td class="title intro">자기소개서<br></td>
+                <td><textarea id="selfintro" name="essay" placeholder="300자 미만"></textarea></td>
+            </tr>
+            <tr >
+                <td colspan="2"><button type="submit">제출하기</button></td>
+                
+            </tr>
+
+        </table>
+    </Form>
+</body>
+
+</html>

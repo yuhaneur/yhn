@@ -1,0 +1,64 @@
+
+.item:nth-child(1){
+    background-color: aqua;
+}
+.item:nth-child(2){
+    background-color: aquamarine;
+}
+.item:nth-child(3){
+    background-color:lawngreen; 
+}
+.item:nth-child(4){
+    background-color:bisque;
+}
+
+
+#box1 {
+    width: 500px;
+    height:200px;
+    display:flex;
+    border:1px solid black;
+    justify-content: space-evenly;  
+}
+#box1 .item{
+    width:50px;
+}
+
+#box2{
+    width:500px;
+    height:200px;
+    border:1px solid black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+/* align-items: start, end 하면 안보임 
+높이가있어야보임
+align-items: stretch= 부모의 높이만큼 꽉채우라는뜻*/
+
+#box2 .item{
+    width:50px;
+    height: 50px;
+}
+#box3{
+    width:500px;
+    height: 200px;
+    border:1px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+/* flex-direction: column; 은 주측과 교차축의 방향을 바꿈 */
+#box3 .item{
+    height:30px;
+    width:50px;
+}
+#box3 .item:nth-child(3){
+    order:1;
+}
+#box3 .item:nth-child(1){
+    order:2;
+}
+/* flex-direction: column;을사용하면
+order 로 순서를 바꿀수있다. */

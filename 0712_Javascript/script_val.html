@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script type="text/javascript">
+        //변수 - 데이터를 저장하는 메모리공간
+        //데이터 - 숫자, 문자 
+        // a=10;
+        // 나변수=20;
+        // 너도변수=30;
+        // 상현이도변수=40;
+        // bbb=50;
+        // apple="아이폰";
+
+        // let name="강해민";
+        // name="강미경";
+        // let name:"김선경"
+        
+        // var age=24;
+        // age=30;
+        // var age=40
+
+        // const pi=3.14;
+        //  pi=2.111;변수는 데이터 하나만 저장가능
+        // 변수앞에 쓰는용어들 const는 데이터변경이안된다. 하나의 데이터로  쭉써야됨
+        // 데이터변경 방지하기위해 const 사용
+        //let 타입은 데이터 변경은 가능하지만 같은 이름의 변수를
+        //    다시 생성(재선언) 할 수 없다.
+        //var 타입은 데이터 변경 가능하고 같은 이름의 변수를 재선언 할 수 엇다.
+        //const 타입은 처음 저장한 데이터를 변경 시킬 수 없고, 재선언 할 수 없다.
+        //앞에 아무것도안붙어있으면 var타입으로 만들어지는것이다.
+        // prompt(); 
+        //입력 > 저장> 실행 > 출력
+        // prompt(); // << 입력
+        // = : 대입연산자 (오른쪽의 값을 왼쪽에 저장)
+        // var name = prompt();  //입력 후 저장
+        //alert(name);  //출력
+        //자바스크립트에서 문자를 표현하려면 ""또는'' 문자를 감싸주어야한다.
+        //자바스크립트에서 html 태그는 문자로 표현 할 수 있다.
+        // document.write("<b>"+name+"</b>");
+        //document : 현재 html 문서
+        
+        //변수는 새로운 데이터가 발생되면 변수에 저장하기
+        // var number1 = Number(prompt("숫자를 입력하세요")); //숫자로바꾸는 방법 앞에다 Number()써줌
+        // var numver2 = parseInt(prompt("두번째 숫자를 입력하세요")); //prompt로쓰는건 다 문자언어이다.
+        // //두번째 방법 앞에다 parseInt((prompt)) 써주기
+        // //Number는 순수 숫자 변형 가능 ,parseInt 는 앞쪽에 있는 숫자만 변형가능 ex)10a = 10
+        // // document.write(typeof(number1)); //typeof = 내가 입력한것이 숫잔지 문자인지 확인하는방법
+        
+        // var result = number1 + numver2; //
+
+        // document.write(result );
+
+        //국어,수학,영어 3과목의 점수를 입력받아 총점을 출력하시오
+        var kor = Number(prompt("국어점수"));
+        var mat = parseInt(prompt("수학점수"));
+        var eng = parseInt(prompt("영어점수"));
+        
+        var total = kor + mat + eng;
+        document.write("총점 : <b>"+ total+"</b>점" );
+
+        //오늘의 과제
+        // 사각형의 너비와 높이를 입력받아서 넓이가 얼마인지 출력하시오..
+        
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

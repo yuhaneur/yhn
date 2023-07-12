@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .imgWarp{
+                width:300px;
+                height:300px;
+                background:url(https://picsum.photos/500/500);
+                transition: all 0.3s linear;
+            }
+            /* transition 변화가되는속성(너비,높이) , 시간, 
+             */
+            .img_box:hover .imgWarp{
+                transform: scale(1.5);
+            }
+            .img_box{
+                width:300px;
+                overflow: hidden;
+            }
+            #red{
+                background-color: red;
+                width:200px;
+                height:200px;
+                transition: width 1s linear;
+            }
+            #red:hover{
+                width:300px;
+                background: yellowgreen;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <h3>이미지 줌 아웃</h3>
+        <div class="img_box">
+            <div class="imgWarp">
+
+            </div>
+        </div>
+        <div id="red">
+
+        </div>
+        <!-- https://github.com/kyerim1/data_401 -->
+    </body> 
+</html>

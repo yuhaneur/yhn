@@ -1,0 +1,81 @@
+#wrap{
+    width:1000px;
+    margin:0 auto;
+    border: 1px solid black;
+}
+/* 두개의 그룹을 , 로 나눔 
+div 에서는 vertical-aline 안통함*/
+/* margin 여백 */
+#box1{
+    border:1px solid red;
+    height:50px;
+    width:100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+/* flex는레이아웃 구성,현재실무에서 
+태그를 배치하는방법중하나이다.
+display:flex가 적용된 태그는
+부모태그(flex 컨테이너)라고 한다
+flex적용된 태그의 하위태그들은 
+flex아이템 라고 한다.
+
+flex는 주축과 교차축에 의해 배치가된다.
+주축 기준으로 배치는 justify-content 이다.
+justify-content에는 start, center,
+end, space-around,space-between이 있다.
+교차축 기준으로 배치는 align-items 이다.
+align-items에는 start, center, end 등이 있다.
+ */
+
+    /* line-height:100px; */
+    /* line-height(줄간격)은 글씨가 한줄일때 사용가능방법 */
+
+.logo_box{
+    width:200px;
+    float:left; /*정렬 - 왼쪽 기준으로 정렬시키기*/
+}
+.logo_box img{/*클래스가logo_box인 태그밑에있는 img태그선택*/
+    
+    height:50px;
+    /*이미지는 너비나 높이 하나만 값을주는게 이쁘게나옴
+    아니면 칸에맞춰 로고를맞추던가*/
+}
+.menu_box{
+    /* width: 800px; */
+    width:calc( 100% - 200px );
+}
+.menu{
+    list-style-type:none;
+    display:flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+} /*리스트 옆에 점을 없애준다*/
+
+.menuTitle{
+    /* float:left; */
+    /* margin-left:80px; */
+}
+/* float을 사용하면 단점이 부모태그와 별도로 존재하는 태그가되버림
+ 잘안씀 */
+#box2{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+    /*여러줄 배치 하려면 wrap설정
+    자식태그의 너비가 정해져있어야함*/
+}
+/* flex 기본배치는 한줄
+flex */
+.items{
+    width: 300px;
+    /* width:14.2%;
+    overflow: hidden; 
+    div 크기보다 이미지의 크기가 클경우 */
+    
+}
