@@ -45,13 +45,18 @@
 //조건식 - 결과가 참과 거짓이 나오는 식 
 //         비교 -  [> , < , >= , <=] 대소비율연산자 ,[== ,!=]
 
+
 // var tall = 150;
+// var tall = 130;
+
 // if( tall >= 140)
 // { // 조건식이 참일경우 실행되는곳 
 //     document.write("바이킹 탑승");
 // }else{ //조건식이 거짓일때만 실행되는곳
 //     document.write("바이킹 탑승 불가");
 // }// }
+// }
+
 
 // var speed=Number(prompt("속도"));
 
@@ -147,6 +152,24 @@
 //     a=Number(a);
 //     return a;
 // }
+// var di = Math.floor(Math.random()*6)+1;
+// var user = prompt("주사위 숫자 맞춰")
+// user=Number(user);
+// if( di==user){
+//     document.write("정답"+di);
+// }else if(di!=user){
+//     document.write("손목");
+// }
+// //함수로표현한다면
+// function inputNum(str){
+//     var a= prompt(str);
+//     while( isNaN(a)){
+//         alert("숫자만 입력 가능합니다.");
+//         a=prompt(str);
+//     }
+//     a=Number(a);
+//     return a;
+// }
 
 /*
     주차장 요금 계산
@@ -183,4 +206,3 @@ if(tip<=30){
 }
 
 
- 
