@@ -160,4 +160,8 @@ function inputNum(str){
     주차한 시간이 총 몇분인가 입력하여 요금 출력하기
  */
 
+var park = prompt("주차 시간")
+if (park<40){
+    document.write("1000원")
+}
 
