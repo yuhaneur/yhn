@@ -65,6 +65,8 @@ body{
 #header .navigation .nav .nav_menu{
    position: relative;
    left:0;
+   transition: left 1s ease;
+   
     /* transform: translate(0px,0px);
    transition:transform 1s ease; */
 }
@@ -88,18 +90,19 @@ body{
     text-align: center;
 }
 
-#secion .list_box .name span{
-    display:inline-block;
-    width:40px;
-    position: relative;
+#section .list_box .name span{
+    display:block;
+    width:48px;
+    position:relative;
 }
-#secion .list_box .name span::after {
+
+#section .list_box .name span::after{
     content:"";
     width:48px;
     position:absolute;
     top:25px;
-    left:0;
+    left:0;   
 }
-#secion .list_box .name span:hover:after{
-    border-bottom: 2px solid orange;
+#section .list_box .name span:hover:after{
+    border-bottom:2px solid orange;
 }
