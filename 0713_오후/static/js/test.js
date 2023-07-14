@@ -185,7 +185,7 @@
 
 
     //1000+ 100a  a=(10b) b=정수 .
-var tip=Number(prompt("주차시간을 분단위로 입력하세요"));
+// var tip=Number(prompt("주차시간을 분단위로 입력하세요"));
 
 if(tip<=30){
     document.write(1000+"&nbsp원");
@@ -204,5 +204,25 @@ if(tip<=30){
 }else if(tip>=480){
     document.write(5000+"&nbsp원");
 }
+
+// var tip=Number(prompt("주차시간을 분단위로 입력하세요"));
+
+// if(tip<=30){
+//     document.write(1000+"&nbsp원");
+// }else if(120>tip>30){
+//     ov= tip-30
+//     won=(1000)+(Math.floor(ov/10)*100);
+//     document.write(won+"&nbsp원");
+// }else if(240>tip>=120){
+//     ov=tip-120
+//     won=(1500)+(Math.floor(ov/10)*100);
+//     document.write(won+"&nbsp원");
+// }else if(480>tip>=240){
+//     ov=tip-240
+//     won=(2500)+(Math.floor(ov/10)*100);
+//     document.write(won+"&nbsp원");
+// }else if(tip>=480){
+//     document.write(5000+"&nbsp원");
+// }
 
 
