@@ -24,7 +24,7 @@
 
 //0+2+4+6+8+10+ ...+96+98+100
 // var total = 0;
-// for(1=0; i<=100; i++){
+// for(i=0; i<=100; i++){
 //     if(i%2 == 0){
 //         total = total + i;
 //     }
@@ -51,17 +51,17 @@
 //31번 반복하되 옵션태그 내에는 1부터 31까지의 숫자가 들어가야한다.
 //반복하자 31번
     //아이디 date에 내용 추가하자
-        //<option>[반복한횟수+1]</option>
-// var tag = "";
-// for(i=0;i<31;i++){
-//     tag = tag+ "<option>"+(i+1)+"</option>";
-// }
-// document.getElementById("date").innerHTML = tag;
+        // <option>[반복한횟수=+1]</option>
+var tag = "";
+for(i=0;i<31;i++){
+    tag = tag+ "<option>"+(i+1)+"</option>";
+}
+document.getElementById("date").innerHTML = tag;
 
 // 오감도 - 이상
-var fiveSense = "";
-for(i=0;i<13;i++){
-    fiveSense = fiveSense + "제 "+(i+1)+"의 아해가 무섭다고 그리오"<br>
-}        
-document.getElementById("para1").innerHTML = fiveSense;
+// var fiveSense = "";
+// for(i=0;i<13;i++){
+//     fiveSense = fiveSense + "제 "+(i+1)+"의 아해가 무섭다고 그리오"<br>
+// }        
+// document.getElementById("para1").innerHTML = fiveSense;
 
