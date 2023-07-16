@@ -2,7 +2,7 @@
 let slide_left=0; //전역변수 let , consol로 만듬
 
 $(function(){//페이지가 모두 로드(화면에 표시할꺼) 되면 실행
-    $(".prev").on("click",function(){
+    $(".prev").on("click",function(){ //on("click") 하고 .click 하고 같은표현
         if(0 == slide_left)//첫번째 li가 화면에 표시된경우
             return;
 
@@ -13,7 +13,7 @@ $(function(){//페이지가 모두 로드(화면에 표시할꺼) 되면 실행
     $(".next").click(function(){
         var li=$(".nav_menu>li");
         var len=li.length;
-
+l
         
         if( ((len-1)*-180) == slide_left)//마지막 li가 화면에 표시된경우
             return;
@@ -46,7 +46,7 @@ function make(){
         
         out += "<td class='name'> <span>"+list[i]+"</span> </td>";
         out += "<td class='age'>"+(Math.floor(Math.random()*16 )+20 )+"</td>";
-        var n=Math.floor(Math.random()*addr.length ) ;
+        var n= Math.floor(Math.random()*addr.length ) ;
         out += "<td class='addr'>"+addr[n]+"</td>";
     
         out += "</tr>";
