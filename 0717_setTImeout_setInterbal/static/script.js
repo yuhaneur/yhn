@@ -1,55 +1,55 @@
 // 페이지를 연 후 3초가 지났을때 이런일을 할 것이다.
     // 아이디가 box1인 녀석 안에 "hello" 라는 문자열을 추가하겠다.
 
-// window.setTimeout(function(){ //window. 는 생략가능 ,function(){}익명함수
-//     document.getElementById("box1").innerHTML
-//     =document.getElementById("box1").innerHTML + "hello";
-// }, 3000);   
+window.setTimeout(function(){ //window. 는 생략가능 ,function(){}익명함수
+    document.getElementById("box1").innerHTML
+    =document.getElementById("box1").innerHTML + "hello";
+}, 3000);   
 // 페이지를 연 후 3초 마다 이런일을 할 것이다.
     // 아이디가 box1인 녀석 안에 "hello" 라는 문자열을 추가하겠다.
-//     setInterval(function(){
-//     document.getElementById("box1").innerHTML
-//     = document.getElementById("box1").innerHTML + "hello";
-// }, 50);
+    setInterval(function(){
+    document.getElementById("box1").innerHTML
+    = document.getElementById("box1").innerHTML + "hello";
+}, 50);
 
-// for(i=0; true; i++){
-//     document.getElementById("box1").innerHTML
-//     = document.getElementById("box1").innerHTML + "hello";
+for(i=0; true; i++){
+    document.getElementById("box1").innerHTML
+    = document.getElementById("box1").innerHTML + "hello";
 
-// }
+}
 
-// setTimeout(function(){
-//     location.href = "http://naver.com";
-// },3000);
-//redirection
+setTimeout(function(){
+    location.href = "http://naver.com";
+},3000);
+redirection
 
 //한자리 숫자인 경우 앞에 "0"을 추가해주는 함수
-// function addZero(num){
+function addZero(num){
 //     //재료로 들어온 숫자(num)가 만약 10보다 작다면?(한자리 숫자라면)
 //         //그 숫자 왼쪽에 "0"을 더해주고 가공된 숫자라고 하자/
 //     //그렇지 않다면 
 //         //그냥 재료로 들어온 숫자를 가공된 숫자라고 하자.
 //     //그렇게 가공된 숫자를 원천자에게 납품한다.
-//     var result;
-//     if(num < 10){
-//         result = "0" + num;
-//     }else{
-//         result = num;
-//     }
-//     return result;
-// }
+    var result;
+    if(num < 10){
+        result = "0" + num;
+    }else{
+        result = num;
+    }
+    return result;
+}
 
-// function addZZero(num){
-//     var result;
-//     if(num < 10){
-//         result= "00" + num;
-//     }else if(num< 100){
-//         result = "0" + num;
-//     }else{
-//         result = num;
-//     }
-//     return result;
-// }
+function addZZero(num){
+    var result;
+    if(num < 10){
+        result= "00" + num;
+    }else if(num< 100){
+        result = "0" + num;
+    }else{
+        result = num;
+    }
+    return result;
+}
 
 // var clock= setInterval(function(){
 //     //현재 시간을 캡처한다.
@@ -102,9 +102,9 @@
 // Math.random()*(최대값-최소값+1)+최소값
 //버림( Math.random()*(최대값-최소값+1)+최소값); 
 // Math.floor(Math.random()*(max-min+1)+min);
-function rand(min,max){ //중요//
-   return Math.floor(Math.random()*(max-min+1)+min);
-}
+// function rand(min,max){ //중요//
+//    return Math.floor(Math.random()*(max-min+1)+min);
+// }
 // // var count = [0,0,0,0,0,0];
 // // for(i=0,i<100;i++){
 // //     var num=rand(1,6);
@@ -127,9 +127,9 @@ function rand(min,max){ //중요//
 
 // path 에서 확장자 추출하기
 // var path="abc/fff/123/1234/eee.asfewf.aswdfajpg";
-var path =location.href; //중요
-path = path.split("/");  //  [/ ] 기준으로 단락을 나눔
-var ext = path[path.length-1].split("."); //파일명 
-ext = ext[ext.length-1]; //확장자
-alert( ext );
+// var path =location.href; //중요
+// path = path.split("/");  //  [/ ] 기준으로 단락을 나눔
+// var ext = path[path.length-1].split("."); //파일명 
+// ext = ext[ext.length-1]; //확장자
+// alert( ext );
 

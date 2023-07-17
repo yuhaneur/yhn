@@ -21,8 +21,20 @@
         </li>
         <li>setTimeout(함수, 지연시간) 해당 함수를 해당 시간 간격으로 반복한다. (밀리초 단위, 1000㎳ = 1s)</li>
         <li>setInterval(함수, 반복시간)해당 함수를 해당 시간 이후에 실행시킨다. (밀리초 단위, 1000㎳ = 1s)</li>
-        <li></li>
-        <li></li>
+        <li>var text = ("안녕하세.요하하입니다");<br>
+            // alert(text.indexOf("하")); // 하 는 몇번쨰순서에 있냐<br>
+            // alert(text.charAt("4")); //4번째순서있는 글자는 뭐냐<br>
+            // alert(text.substring(2,5));// 2부터 5전까지(4번쨰까지)의 글자는 무엇이냐</li>
+        <li><mark>var path="abc/fff/123/1234/eee.asfewf.aswdfajpg";<br>
+            var path =location.href; (중요) </mark><br>
+            path = path.split("/");  //  [/ ] 기준으로 단락을 나눔<br>
+            // var ext = path[path.length-1].split("."); //파일명 <br>
+            // ext = ext[ext.length-1]; //확장자<br>
+            alert( path ); <mark>path에서확장자 추출하기</mark></li>
+        <li>function di(){ <br>
+            return  Math.floor(Math.random()*6)+1;}<br>
+        var rdn=di();<br>
+        alert(rdn); <mark>주사위 만드는법</mark></li>
     </ul>
 </body>
 </html>
