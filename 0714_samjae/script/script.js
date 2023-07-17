@@ -47,3 +47,38 @@ document.getElementById("btn").onclick = function(){
         }
     }
 }
+
+//반복문(for/while)을 제어하는 두가지 방법
+//break(그만둔다)
+// for(i=o;i<수명;i++){
+//     if(사고를 당했다){
+//         break; //브레이크만나면 여기서 중지됨
+//     }
+
+// for(i=o;i<정년;i++){
+//     if(누가 이유없이 나를 미워한다){
+//         break;
+//     }else{
+//         //출근한다
+//     }
+// }
+
+// //continue(이번턴을 쉰다)
+// for(i=0;i<정년;i++){
+//     if(큰 병에 걸렸다){
+//         continue;
+//     }else{
+//         //출근한다
+// }
+
+//1~100까지의 숫자중 짝수만 더하는 프로그램
+//1~100까지의 숫자중 짝수이면 더하고 홀수이면 건너뛰는 프로그램
+var total=0;
+for(i=1;i<=100;i++){
+    if(i%2 ==0){
+        total = total + i;
+    }else{
+        continue;
+    }
+}
+alert(total);
