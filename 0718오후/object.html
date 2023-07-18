@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<!--
+    JSON - javascript object notaion
+    데이터를 저장 표현할때 사용한다.(경량)
+    자바스크립트에서 객체 표현 방식을 사용한다.
+    페이지 이동없이 , 주소 변화 없이 데이터를 저장하고 가져오고
+    할경우에 사용될 수 있다.
+    
+    웹에서 사용자가 입력한 데이터를 처리하기위해서는 
+    주소를 통해 서버에 데이터를 전달하고 처리결과를 다른 주소또는
+    이전 주소로 받아서 화면에 표시 해준다.
+    JSON 데이터 형식
+    키:값 
+    {"name":"이순신", "age":32}
+    name 은 키, 이순신 은 값 이다.
+
+    오늘 수업 -1.json 데이터 만들고 사용하기
+    2.json 파일을 만들어서 데이터 읽어와서 사용하기
+    3.json 데이터를 서버에 보내 저장시키고 서버에 저장된 데이터를
+      json형식으로 가져와서 사용하기
+    4.공공데이터의 json데이터를 가져와보기
+--> 
+    <h1>JSON 사용하기</h1>
+    <div id="input_box">
+        <input type="text" name="name" id="name" placeholder="이름">
+        <input type="text" name="age" id="age" placeholder="나이">
+        <input type="text" name="tel" id="tel" placeholder="연락처">
+        <button id="save_bt">저장하기</button>
+
+    </div>
+    <div id="output_box">
+        
+    </div>
+
+</body>
+</html>
+
+<script>
+    let info= new Array();
+    info[0] = {"name":"강해민", "age":20, "tel":"01045739856"};
+    //'{"info1" : {"name":"강해민", "age":20, "tel":"01045739856"}, "info1" : {"name":"강해민", "age":40, "tel":"01045739856"} }';
+    /* 여러개의 값을 나타내고싶을땐 배열구조로 나타내준다.
+        {
+            "info":[
+                {"name":"이순신",  "age":23 }
+                ,
+                {"name":"이순신",  "age":25 }
+            ]
+        }
+    
+    
+    
+    */
+    // info.info1.name =강해민 , info.info1.age = 20 나옴 // 키는 똑같은 이름을 가질수없음 (동일한키를한번더 저장하면 마지막껄로 저장됨)
+//     let jsoninfo = JSON.stringify(info); //stringify =  자바스크립트 객체를 json으로 변환
+
+// //JSON -> 자바스크립트 : JSON.parse( )
+// //서버에 보낼떄는 JSON으로변환하고 서버로 부터 받을떄는 자바스크립트로 변환한다. 
+
+//     console.log(JSON.parse(jsoninfo));
+//     console.log(jsoninfo);
+
+    $("#save_bt").click(save_info);
+let cnt=0;//전역변수
+    function save_info(){
+        var name= $("#name").val();
+        var age = $("#age").val();
+        var tel = $("#tel").val();
+        info[++cnt]={"name":name,"age":age,"tel":tel};
+
+        console.log(JSON.stringify({"info":info}));
+
+       // for(var i=0;i<=info.length;i++ ){
+            $("#output_box").append("이름 : "+info[i].name+"<br> 나이 :" +
+            info[i].age+"<br> 연락처 : "+info[i].tel);
+       // }
+
+
+        // $("#output_box").html("이름 : "+ info.name+"<br> 나이 : "+info.age+"<br> 연락처 : "+info.tel);
+    }
+</script>

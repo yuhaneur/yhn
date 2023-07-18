@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+    <meta name="author" content="haneul">
+    <meta name="keywords" content="날짜 , 시간 , 시 , 분 , 초 , 월 , 일 , 년, timestamp">
+    <meta name="description" content="Date 객체를 통해 날짜 및 시간을 확인
+    또는 세팅할 수 있으며 계산도 할 수 있다.">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<style>
+nav{
+    height: 30px;
+}
+nav ul{
+    list-style: none;
+}
+.main{
+    float: left;
+}
+.main>a{
+    display: block;
+    width:150px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.sub{
+    position:absolute ;
+    background-color: white;
+    box-shadow: 2px 10px 15px rgba(0,0,0,0,0.2);
+    padding-left: 15px;
+    width: 150px;
+    display: none;
+}
+.sub a {
+    display: block;
+    padding: 8px 10px;
+}
+</style>
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="main">
+                <a href="#">회사소개</a>
+                <ul class="sub">
+                    <li><a href="#">CEO인사말</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                    <li><a href="#">회사 연혁</a></li>
+                </ul>
+            </li>
+            <li class="main">
+                <a href="#">제품소개</a>
+                <ul class="sub">
+                    <li><a href="#">모바일 사업부</a></li>
+                    <li><a href="#">메모리 사업부</a></li>
+                    <li><a href="#">비메모리 사업부</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <input id="result"type="text" readonly>
+    <br> <!-- readonly >인풋태그 건들수없음-->
+    <input id="date" type="date"> 
+    <button id="dateBtn"type="button">계산하기</button>
+
+    <ul>
+        <li id="box1">asdf</li>
+        <li id="box2">asdf</li>
+        <li id="box3#">wef</li>
+        <li id="box4">rfea</li>
+    </ul>
+    <select id="nation">
+        <option>대한민국</option>
+        <option>미국</option>
+        <option>영구</option>
+        <option>인도</option>
+        <option>파푸아뉴기니</option>
+        <option>멕시코</option>
+    </select>
+    <input/>
+    <input id="input2" placeholder="비밀번호를 입력하세요"/>
+    <input id="input1"/>
+    <p id="final"></p>
+    <button id="submitBtn">로그인</button>
+
+    <img id="fly">
+
+    <script src="script/script.js"></script>
+</body>
+</html>
