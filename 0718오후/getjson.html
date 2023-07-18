@@ -27,7 +27,7 @@ $.getJSON('test_data.json',function(data){
 
 for(var i=0; i<data.info.length; i++){
 
-    if(data.info[i].addr.indexOf("동구")!=-1){//addr.indexOf("동구")!=-1 문자열찾는법
+    if(data.info[0].age>='30'){
 
         $("#list").append(
             "<tr><td class=name>"+data.info[i].name+"</td><td class=age>"+

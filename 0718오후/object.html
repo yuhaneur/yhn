@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-<!--
+
+    <!--
     JSON - javascript object notaion
     데이터를 저장 표현할때 사용한다.(경량)
     자바스크립트에서 객체 표현 방식을 사용한다.
@@ -28,7 +31,7 @@
     3.json 데이터를 서버에 보내 저장시키고 서버에 저장된 데이터를
       json형식으로 가져와서 사용하기
     4.공공데이터의 json데이터를 가져와보기
---> 
+-->
     <h1>JSON 사용하기</h1>
     <div id="input_box">
         <input type="text" name="name" id="name" placeholder="이름">
@@ -38,15 +41,18 @@
 
     </div>
     <div id="output_box">
-        
+
     </div>
 
 </body>
+
 </html>
 
 <script>
-    let info= new Array();
-    info[0] = {"name":"강해민", "age":20, "tel":"01045739856"};
+    let info = new Array();
+    let cnt = 0;//전역변수
+    info[cnt] = { "name": "강해민", "age": 20, "tel": "01045739856" };
+    show_info();
     //'{"info1" : {"name":"강해민", "age":20, "tel":"01045739856"}, "info1" : {"name":"강해민", "age":40, "tel":"01045739856"} }';
     /* 여러개의 값을 나타내고싶을땐 배열구조로 나타내준다.
         {
@@ -61,30 +67,49 @@
     
     */
     // info.info1.name =강해민 , info.info1.age = 20 나옴 // 키는 똑같은 이름을 가질수없음 (동일한키를한번더 저장하면 마지막껄로 저장됨)
-//     let jsoninfo = JSON.stringify(info); //stringify =  자바스크립트 객체를 json으로 변환
+    //     let jsoninfo = JSON.stringify(info); //stringify =  자바스크립트 객체를 json으로 변환
 
-// //JSON -> 자바스크립트 : JSON.parse( )
-// //서버에 보낼떄는 JSON으로변환하고 서버로 부터 받을떄는 자바스크립트로 변환한다. 
+    // //JSON -> 자바스크립트 : JSON.parse( )
+    // //서버에 보낼떄는 JSON으로변환하고 서버로 부터 받을떄는 자바스크립트로 변환한다. 
 
-//     console.log(JSON.parse(jsoninfo));
-//     console.log(jsoninfo);
+    //     console.log(JSON.parse(jsoninfo));
+    //     console.log(jsoninfo);
+
+
+    // cnt++ = info[0] 구문 돌고 info[1] 이렇게 됨 = 선연산 후증가
+    // ++cnt = info[1] 되고 구문 돌아버림 = 선증가 후연산
 
     $("#save_bt").click(save_info);
-let cnt=0;//전역변수
-    function save_info(){
-        var name= $("#name").val();
-        var age = $("#age").val();
-        var tel = $("#tel").val();
-        info[++cnt]={"name":name,"age":age,"tel":tel};
 
-        console.log(JSON.stringify({"info":info}));
+    function save_info() {
+        var name = $("#name").val(); // #name의 value 값을 name 변수에 저장
+        var age = $("#age").val(); // #age의 value 값을 age 변수에 저장
+        var tel = $("#tel").val(); // #tel의 value 값을 tel 변수에 저장
+        info[++cnt] = { "name": name, "age": age, "tel": tel };
+        // cnt를 선증가 후연산 방식으로 먼저 cnt에 1을 더해준 다음에 info의 cnt번째의 배열에 접근해서 입력한 데이터를 넣어줌.
 
-       // for(var i=0;i<=info.length;i++ ){
-            $("#output_box").append("이름 : "+info[i].name+"<br> 나이 :" +
-            info[i].age+"<br> 연락처 : "+info[i].tel);
-       // }
+        console.log(JSON.stringify({ "info": info }));
+        //console에 JSON으로 변환된 info 배열을 보여줌.
+
+        show_info();
+        // info 배열에 저장이 완료된 데이터를 html에 밀어넣는 방식으로 보여줌.
+
+        // for(var i=0;i<=info.length;i++ ){
+        
+        // document.innerHTML += info[i]
+        // }
 
 
         // $("#output_box").html("이름 : "+ info.name+"<br> 나이 : "+info.age+"<br> 연락처 : "+info.tel);
+    }
+
+    function show_info() {
+        $("#output_box").append("이름 : " + info[cnt].name + "<br> 나이 :" +
+            info[cnt].age + "<br> 연락처 : " + info[cnt].tel + "<br/>");
+        // $("#output_box").html("이름 : " + info[cnt].name + "<br> 나이 :" +
+        //     info[cnt].age + "<br> 연락처 : " + info[cnt].tel + "<br/>");
+
+            // .html의 경우는 태그 안의 내용을 완전히 대체
+            // .append의 경우는 태그 안의 내용 제일 마지막에 삽입.
     }
 </script>
