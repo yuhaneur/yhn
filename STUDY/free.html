@@ -9,36 +9,20 @@
     <meta name="description" content="setTimeout을 이용하여 특정시간 이후에
     실행될 내용을 미리 정해둘 수 있다. setInterval을 이용하여 특정시간 마다
     실행될 내용을 미리 정해둘 수 있다.">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" src="css/free.css" >
+ 
 
-    <style>
-    #list tr td{
-        border:1px solid black;
-        height: 50px; text-align: center;
-    }
-    .name{width:200px; height:50px; text-align:center;}
-    .age {width: 80px;}
-    .addr{width: 400px;}
-</style>
 </head>
 <body>
-        <table id="list">
+    <header>
+        <dvi id="header">
+            <h2>CSS Quiz-2</h2>
+        </dvi>
+    </header>
 
-    </table>
+   
 </body>
 </html>
 <script>
-$.getJSON('free_data.json',function(data){ //json 연결시켜서 행동취하기
 
-for(var i=0; i<data.info.length; i++){
-
-    if(data.info[i].addr.indexOf("   ")!=-1){//addr.indexOf("동구")!=-1 문자열찾는법 data.info[i].age<30 나이찾기
-//data.info[i].name.indexOf("김")!=-1 이름 찾기 [indexOf("") != -1 은 문자열표시]
-        $("#list").append( // ?
-            "<tr><td class=name>"+data.info[i].name+"</td><td class=age>"+
-                data.info[i].age+"</td><td class=addr>"+data.info[i].addr+"</td>");
-            }
-            }
-                
-});//$.getJSON(주소,무엇을할꺼냐) function(json파일안에있는거)
 </script>
