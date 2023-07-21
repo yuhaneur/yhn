@@ -36,6 +36,9 @@ ul{
     padding-right:100px;
     padding-top:20px;
 }
+#menu_box::before{
+    
+}
 #wrap #topImage{
     width:100%;
     height:300px;
@@ -65,4 +68,24 @@ span {
     display: inline-block;
     padding:22px;
     
+}
+#midMenuBox{
+    width:80%;
+    height:930px;
+    background: yellowgreen;
+    
+}
+#midMenu{
+    width:90%;
+    height:20%;
+    
+}
+#midMenuBox #midMenu .midBox{
+   width:80%;
+   height:170px;
+   display:flex;
+}
+#midMenuBox #midMenu p{
+    text-align: center;
+    font-size: 24px;
 }
